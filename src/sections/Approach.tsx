@@ -30,7 +30,7 @@ const pillars = [
   {
     number: '04',
     title: 'Accessible by Default',
-    description: 'Accessibility is not a mode or a setting — it is the baseline. Every feature is built to work equally well across visual, audio, and haptic input from the first line of code.',
+    description: 'Accessibility is not a mode or a setting. It is the baseline. Every feature is built to work equally well across visual, audio, and haptic input from the first line of code.',
     accent: 'from-orange-500/12 via-orange-500/4 to-transparent',
     border: 'group-hover:border-orange-400/40',
     dot: 'bg-orange-400',
