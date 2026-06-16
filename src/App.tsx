@@ -2,7 +2,6 @@ import { Routes, Route } from 'react-router-dom'
 import { MotionProvider } from './context/MotionContext'
 import Nav from './components/Nav'
 import Home from './pages/Home'
-import Founders from './pages/Founders'
 
 export default function App() {
   return (
@@ -13,7 +12,7 @@ export default function App() {
       <Nav />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/founders" element={<Founders />} />
+        <Route path="/founders" element={<Home />} />
       </Routes>
     </MotionProvider>
   )
