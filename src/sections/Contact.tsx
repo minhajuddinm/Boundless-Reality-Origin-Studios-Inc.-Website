@@ -103,7 +103,7 @@ export default function Contact() {
               href="#" // PLACEHOLDER: Replace with real URL
               target="_blank"
               rel="noopener noreferrer"
-              aria-label={`${s.label} — placeholder link`}
+              aria-label={`${s.label} link`}
               role="listitem"
               className="w-11 h-11 rounded-xl border border-white/12 glass flex items-center justify-center
                          text-bros-muted hover:text-bros-white hover:border-bros-cyan/50
