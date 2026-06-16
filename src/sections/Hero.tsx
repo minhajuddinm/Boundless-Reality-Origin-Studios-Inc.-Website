@@ -81,7 +81,7 @@ export default function Hero() {
 
       {/* Main content with parallax */}
       <motion.div
-        className="relative z-10 text-center px-6 max-w-5xl mx-auto"
+        className="relative z-10 text-center px-6 max-w-5xl mx-auto pb-20"
         style={motionEnabled ? { y: contentY, opacity: contentOpacity } : {}}
       >
         {motionEnabled ? (
@@ -200,7 +200,7 @@ export default function Hero() {
       {/* Scroll cue */}
       {motionEnabled && (
         <motion.div
-          className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2"
+          className="absolute bottom-6 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 pointer-events-none"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 1.8 }}

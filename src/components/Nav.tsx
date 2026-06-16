@@ -105,13 +105,13 @@ export default function Nav() {
         </Link>
 
         {/* ── Desktop nav ── */}
-        <nav aria-label="Primary navigation" className="hidden md:flex items-center gap-0.5 flex-1 justify-center">
+        <nav aria-label="Primary navigation" className="hidden lg:flex items-center gap-0 flex-1 justify-center">
           {navLinks.map((link) => {
             const isActive = link.isRoute
               ? location.pathname === '/founders'
               : activeLink === link.href
 
-            const cls = `relative px-4 py-2 text-sm font-medium rounded-lg transition-colors duration-200
+            const cls = `relative px-3 py-2 text-sm font-medium rounded-lg transition-colors duration-200
               focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-bros-cyan
               ${isActive ? 'text-bros-white' : 'text-bros-muted hover:text-bros-white hover:bg-white/5'}`
 
@@ -151,7 +151,7 @@ export default function Nav() {
             onClick={toggleMotion}
             aria-pressed={!motionEnabled}
             aria-label={motionEnabled ? 'Disable animations' : 'Enable animations'}
-            className="hidden sm:flex items-center gap-2 px-3 py-1.5 rounded-full glass
+            className="hidden xl:flex items-center gap-2 px-3 py-1.5 rounded-full glass
                        text-xs font-medium text-bros-muted hover:text-bros-white
                        transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-bros-cyan"
             whileHover={motionEnabled ? { scale: 1.04 } : undefined}
@@ -184,7 +184,7 @@ export default function Nav() {
             aria-expanded={menuOpen}
             aria-controls="mobile-menu"
             aria-label={menuOpen ? 'Close menu' : 'Open menu'}
-            className="md:hidden w-10 h-10 flex flex-col items-center justify-center gap-[5px]
+            className="lg:hidden w-10 h-10 flex flex-col items-center justify-center gap-[5px]
                        rounded-lg hover:bg-white/5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-bros-cyan"
           >
             <motion.span animate={menuOpen ? { rotate: 45, y: 6.5 } : { rotate: 0, y: 0 }} transition={{ duration: 0.22 }} className="w-5 h-0.5 bg-bros-white rounded-full block" aria-hidden="true" />
@@ -204,7 +204,7 @@ export default function Nav() {
             animate={{ opacity: 1, height: 'auto' }}
             exit={{  opacity: 0, height: 0 }}
             transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] }}
-            className="md:hidden overflow-hidden glass border-t border-white/5"
+            className="lg:hidden overflow-hidden glass border-t border-white/5"
             role="navigation"
             aria-label="Mobile navigation"
           >
