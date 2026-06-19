@@ -26,7 +26,7 @@ function Scrim({ children, className = '' }: { children: React.ReactNode; classN
 }
 
 // ================================================================
-// STATION 0 — HERO
+// STATION 0 - HERO
 // ================================================================
 function HeroStation() {
   const scrollTo = (id: string) =>
@@ -36,7 +36,7 @@ function HeroStation() {
     <section
       id="home"
       className="relative min-h-screen flex items-center justify-center px-6 pt-16"
-      aria-label="Hero — Boundless Reality Origin Studios"
+      aria-label="Hero | Boundless Reality Origin Studios"
     >
       {/* Depth radial overlays */}
       <div
@@ -164,7 +164,7 @@ function HeroStation() {
 }
 
 // ================================================================
-// STATION 1 — MISSION
+// STATION 1 - MISSION
 // ================================================================
 const stats = [
   { value: '2.2B',  label: 'People worldwide with a vision impairment',                               color: 'text-bros-cyan' },
@@ -243,7 +243,7 @@ function MissionStation() {
 }
 
 // ================================================================
-// STATION 2 — EYES OF THE SOUL
+// STATION 2 - EYES OF THE SOUL
 // ================================================================
 const features = [
   { icon: '◎', title: 'Sonar Pulse Navigation',  description: 'A wave of perception radiates outward, momentarily illuminating the geometry of the world. Navigate by listening to what the pulse reveals.', color: 'border-bros-cyan/20 hover:border-bros-cyan/50' },
@@ -307,7 +307,7 @@ function EotsStation() {
           transition={{ duration: 0.8, delay: 0.3, ease: [0.22, 1, 0.36, 1] }}
         >
           <div className="relative rounded-2xl overflow-hidden border border-white/8 aspect-video">
-            <img src="/gameplay.jfif" alt="Eyes of the Soul — game environment" className="w-full h-full object-cover" />
+            <img src="/gameplay.jfif" alt="Eyes of the Soul - game environment" className="w-full h-full object-cover" />
             <div className="absolute inset-0 border border-bros-cyan/10 rounded-2xl pointer-events-none" aria-hidden="true" />
           </div>
           <div className="relative rounded-2xl overflow-hidden border border-bros-cyan/25 aspect-video">
@@ -366,7 +366,7 @@ function EotsStation() {
 }
 
 // ================================================================
-// STATION 3 — APPROACH
+// STATION 3 - APPROACH
 // ================================================================
 const pillars = [
   { number: '01', title: 'Spatial Audio Design',      description: 'We treat sound as primary geometry. Every environment is authored as an acoustic space first. Visuals are a second layer of expression, not a requirement.',                     accent: 'border-bros-cyan/20 hover:border-bros-cyan/40',    num: 'text-bros-cyan' },
@@ -440,7 +440,7 @@ function ApproachStation() {
 }
 
 // ================================================================
-// STATION 4 — FOUNDERS
+// STATION 4 - FOUNDERS
 // ================================================================
 const founders = [
   { name: 'Muhammad Minhajuddin', role: 'Co-Founder & CEO',              initials: 'MM', bio: 'Visionary behind BROS Inc. accessibility-first mission. Passionate about redefining what VR gaming can mean for players who have been historically left out of the medium.',                                                        glow: 'rgba(0,229,255,0.18)',   border: 'hover:border-bros-cyan/40',   dot: 'bg-bros-cyan' },
@@ -543,7 +543,7 @@ function FoundersStation() {
 }
 
 // ================================================================
-// STATION 5 — CONTACT
+// STATION 5 - CONTACT
 // ================================================================
 const socials = [
   { label: 'Facebook',     symbol: 'f'  },
@@ -654,7 +654,7 @@ function ContactStation() {
 }
 
 // ================================================================
-// EXPORT — all stations in order
+// EXPORT - all stations in order
 // ================================================================
 export default function JourneyHome() {
   return (

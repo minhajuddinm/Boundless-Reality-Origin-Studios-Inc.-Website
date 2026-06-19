@@ -78,20 +78,20 @@ export default function Nav() {
           className="flex items-center gap-3 group focus-visible:outline-none flex-shrink-0"
           aria-label="Boundless Reality Origin Studios, back to top"
         >
-          <div className="relative w-9 h-9 flex-shrink-0" aria-hidden="true">
-            <div className="absolute inset-0 rounded-full border border-bros-cyan/30 group-hover:border-bros-cyan/70 transition-colors duration-300" />
-            <motion.div
-              className="absolute inset-1.5 rounded-full bg-bros-cyan/10 group-hover:bg-bros-cyan/20 transition-colors duration-300"
-              animate={motionEnabled ? { scale: [1, 1.2, 1] } : {}}
-              transition={{ duration: 3, repeat: Infinity, ease: 'easeInOut' }}
-            />
-            <div className="absolute inset-0 flex items-center justify-center">
-              <div className="w-1.5 h-1.5 rounded-full bg-bros-cyan shadow-cyan-sm" />
-            </div>
-          </div>
+          <motion.img
+            src="/logo.png"
+            alt=""
+            className="h-8 w-auto flex-shrink-0"
+            animate={motionEnabled ? { filter: [
+              'brightness(0) invert(1) sepia(1) saturate(5) hue-rotate(165deg) drop-shadow(0 0 4px rgba(0,229,255,0.25))',
+              'brightness(0) invert(1) sepia(1) saturate(5) hue-rotate(165deg) drop-shadow(0 0 12px rgba(0,229,255,0.65))',
+              'brightness(0) invert(1) sepia(1) saturate(5) hue-rotate(165deg) drop-shadow(0 0 4px rgba(0,229,255,0.25))',
+            ] } : { filter: 'brightness(0) invert(1) sepia(1) saturate(5) hue-rotate(165deg) drop-shadow(0 0 6px rgba(0,229,255,0.4))' }}
+            transition={{ duration: 3, repeat: Infinity, ease: 'easeInOut' }}
+            aria-hidden="true"
+          />
           <div className="hidden sm:block leading-none">
-            <p className="text-bros-white font-black text-sm tracking-[0.18em] uppercase">BROS</p>
-            <p className="text-bros-cyan/50 text-[9px] tracking-[0.22em] uppercase font-semibold mt-0.5">Studios</p>
+            <p className="text-bros-white font-black text-sm tracking-[0.18em] uppercase">BROS Inc.</p>
           </div>
         </Link>
 

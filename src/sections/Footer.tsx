@@ -10,9 +10,13 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-6 relative z-10">
         {/* Brand */}
         <div className="flex items-center gap-3">
-          <div className="w-8 h-8 rounded-full bg-bros-cyan/8 border border-bros-cyan/25 flex items-center justify-center flex-shrink-0" aria-hidden="true">
-            <div className="w-1.5 h-1.5 rounded-full bg-bros-cyan" />
-          </div>
+          <img
+            src="/logo.png"
+            alt=""
+            className="h-7 w-auto flex-shrink-0"
+            style={{ filter: 'brightness(0) invert(1) sepia(1) saturate(5) hue-rotate(165deg) drop-shadow(0 0 6px rgba(0,229,255,0.35))' }}
+            aria-hidden="true"
+          />
           <div>
             <p className="text-xs font-bold text-bros-white tracking-wide">Boundless Reality Origin Studios Inc.</p>
             <p className="text-[10px] text-bros-muted/50 tracking-[0.18em] uppercase mt-0.5">BROS Inc.</p>

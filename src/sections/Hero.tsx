@@ -42,7 +42,7 @@ export default function Hero() {
     <section
       id="home"
       ref={sectionRef}
-      className="relative min-h-screen flex items-center justify-center overflow-hidden bg-bros-black"
+      className="relative min-h-screen flex items-center justify-center overflow-hidden bg-bros-black pt-24"
       aria-label="Hero section, Boundless Reality Origin Studios"
     >
       {/* 3D or static */}
@@ -83,6 +83,16 @@ export default function Hero() {
       >
         {motionEnabled ? (
           <motion.div variants={stagger.container} initial="hidden" animate="visible">
+
+            {/* Logo */}
+            <motion.div variants={stagger.item} className="flex justify-center mb-6">
+              <img
+                src="/logo.png"
+                alt="Boundless Reality Origin Studios"
+                className="h-14 sm:h-16 w-auto"
+                style={{ filter: 'brightness(0) invert(1) sepia(1) saturate(5) hue-rotate(165deg) drop-shadow(0 0 14px rgba(0,229,255,0.55))' }}
+              />
+            </motion.div>
 
             {/* Tag */}
             <motion.div variants={stagger.item} className="flex justify-center mb-8">
@@ -159,6 +169,14 @@ export default function Hero() {
         ) : (
           /* Static no-motion version */
           <div>
+            <div className="flex justify-center mb-6">
+              <img
+                src="/logo.png"
+                alt="Boundless Reality Origin Studios"
+                className="h-14 sm:h-16 w-auto"
+                style={{ filter: 'brightness(0) invert(1) sepia(1) saturate(5) hue-rotate(165deg) drop-shadow(0 0 14px rgba(0,229,255,0.5))' }}
+              />
+            </div>
             <div className="flex justify-center mb-8">
               <span className="tag-pill">
                 <span className="w-1.5 h-1.5 rounded-full bg-bros-cyan" aria-hidden="true" />

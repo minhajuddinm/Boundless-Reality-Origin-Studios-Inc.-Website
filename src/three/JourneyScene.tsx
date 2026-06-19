@@ -208,7 +208,7 @@ function Scene({ scrollRef }: { scrollRef: React.MutableRefObject<number> }) {
       <fog attach="fog" args={['#04060A', 6, 45]} />
       <Lights />
 
-      {/* Particles — fewer on mobile */}
+      {/* Particles - fewer on mobile */}
       <ParticleField count={isMobile ? 400 : 900}  spreadZ={42} color="#00E5FF" size={0.024} dir={1}  />
       <ParticleField count={isMobile ? 150 : 350}  spreadZ={40} color="#7B5EA7" size={0.018} dir={-1} />
 
@@ -238,7 +238,7 @@ function Scene({ scrollRef }: { scrollRef: React.MutableRefObject<number> }) {
         />
       ))}
 
-      {/* Floating geometry along the path — skip half on mobile */}
+      {/* Floating geometry along the path - skip half on mobile */}
       {GEO.filter((_, i) => !isMobile || i % 2 === 0).map((g, i) => (
         <Piece key={i} {...g} />
       ))}
