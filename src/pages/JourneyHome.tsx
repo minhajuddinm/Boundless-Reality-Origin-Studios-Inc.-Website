@@ -443,11 +443,11 @@ function ApproachStation() {
 // STATION 4 - FOUNDERS
 // ================================================================
 const founders = [
-  { name: 'Muhammad Minhajuddin', role: 'Co-Founder & CEO',              initials: 'MM', bio: 'Visionary behind BROS Inc. accessibility-first mission. Passionate about redefining what VR gaming can mean for players who have been historically left out of the medium.',                                                        glow: 'rgba(0,229,255,0.18)',   border: 'hover:border-bros-cyan/40',   dot: 'bg-bros-cyan' },
-  { name: 'Masir Javed',          role: 'Co-Founder & CTO',              initials: 'MJ', bio: 'Leads the technical architecture of Eyes of the Soul, including the sonar pulse system and spatial audio engine. Brings deep expertise in XR platform development.',                                                                 glow: 'rgba(123,94,167,0.20)', border: 'hover:border-violet-400/40',  dot: 'bg-violet-400' },
-  { name: 'Tarang Rana',          role: 'Co-Founder & Creative Director', initials: 'TR', bio: 'Shapes the noir aesthetic and world-building of Eyes of the Soul. Designing accessibility-first has unlocked storytelling possibilities that conventional game design misses.',                                                     glow: 'rgba(52,211,153,0.15)', border: 'hover:border-emerald-400/40', dot: 'bg-emerald-400' },
-  { name: 'Raafay Sheikh',        role: 'Co-Founder & Audio Director',   initials: 'RS', bio: 'Architect of the binaural spatial audio system at the heart of Eyes of the Soul. Trained in psychoacoustics with a background in interactive audio for immersive experiences.',                                                    glow: 'rgba(251,146,60,0.15)', border: 'hover:border-orange-400/40',  dot: 'bg-orange-400' },
-  { name: 'Rachit Ranabhat',      role: 'Co-Founder & Head of UX',       initials: 'RR', bio: 'Leads community-driven accessibility research and player testing. Ensures BROS Inc. products are designed with and for the communities they serve, not just designed for them.',                                                    glow: 'rgba(244,114,182,0.15)', border: 'hover:border-pink-400/40',    dot: 'bg-pink-400' },
+  { name: 'Muhammad Minhajuddin', role: 'Co-Founder & CEO',              initials: 'MM', bio: 'Visionary behind BROS Inc. accessibility-first mission. Passionate about redefining what VR gaming can mean for players who have been historically left out of the medium.',                                                        glow: 'rgba(0,229,255,0.18)',   border: 'hover:border-bros-cyan/40',   dot: 'bg-bros-cyan',    linkedin: 'https://www.linkedin.com/in/muhammad-minhajuddin76' },
+  { name: 'Masir Javed',          role: 'Co-Founder & CTO',              initials: 'MJ', bio: 'Leads the technical architecture of Eyes of the Soul, including the sonar pulse system and spatial audio engine. Brings deep expertise in XR platform development.',                                                                 glow: 'rgba(123,94,167,0.20)', border: 'hover:border-violet-400/40',  dot: 'bg-violet-400',   linkedin: 'https://www.linkedin.com/in/masirjaved/' },
+  { name: 'Tarang Rana',          role: 'Co-Founder & Creative Director', initials: 'TR', bio: 'Shapes the noir aesthetic and world-building of Eyes of the Soul. Designing accessibility-first has unlocked storytelling possibilities that conventional game design misses.',                                                     glow: 'rgba(52,211,153,0.15)', border: 'hover:border-emerald-400/40', dot: 'bg-emerald-400',  linkedin: 'https://www.linkedin.com/in/rana-tarang/' },
+  { name: 'Raafay Sheikh',        role: 'Co-Founder & Audio Director',   initials: 'RS', bio: 'Architect of the binaural spatial audio system at the heart of Eyes of the Soul. Trained in psychoacoustics with a background in interactive audio for immersive experiences.',                                                    glow: 'rgba(251,146,60,0.15)', border: 'hover:border-orange-400/40',  dot: 'bg-orange-400',   linkedin: 'https://www.linkedin.com/in/abdul-raafay-sheikh-833091400/' },
+  { name: 'Rachit Ranabhat',      role: 'Co-Founder & Head of UX',       initials: 'RR', bio: 'Leads community-driven accessibility research and player testing. Ensures BROS Inc. products are designed with and for the communities they serve, not just designed for them.',                                                    glow: 'rgba(244,114,182,0.15)', border: 'hover:border-pink-400/40',    dot: 'bg-pink-400',     linkedin: 'https://www.linkedin.com/in/rachit2002/' },
 ]
 
 function FoundersStation() {
@@ -519,18 +519,13 @@ function FoundersStation() {
                 <p className="text-sm text-bros-muted leading-relaxed">{f.bio}</p>
                 <div className="flex items-center gap-2 mt-5 pt-4 border-t border-white/[0.06]">
                   <a
-                    href="#"
+                    href={f.linkedin}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     aria-label={`${f.name} on LinkedIn`}
                     className="w-8 h-8 rounded-lg border border-white/10 glass flex items-center justify-center text-bros-muted hover:text-bros-white hover:border-bros-cyan/40 transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-bros-cyan"
                   >
                     <span className="text-[11px] font-bold" aria-hidden="true">in</span>
-                  </a>
-                  <a
-                    href="mailto:boundlessrealityoriginstudio@gmail.com"
-                    aria-label={`Email ${f.name}`}
-                    className="w-8 h-8 rounded-lg border border-white/10 glass flex items-center justify-center text-bros-muted hover:text-bros-white hover:border-bros-cyan/40 transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-bros-cyan"
-                  >
-                    <span className="text-[11px]" aria-hidden="true">@</span>
                   </a>
                 </div>
               </div>
@@ -546,10 +541,7 @@ function FoundersStation() {
 // STATION 5 - CONTACT
 // ================================================================
 const socials = [
-  { label: 'Facebook',     symbol: 'f'  },
-  { label: 'Twitter / X',  symbol: '𝕏' },
-  { label: 'Instagram',    symbol: '◻' },
-  { label: 'LinkedIn',     symbol: 'in' },
+  { label: 'LinkedIn', symbol: 'in', href: 'https://www.linkedin.com/company/boundless-reality-origin-studios-inc' },
 ]
 
 function ContactStation() {
@@ -632,7 +624,7 @@ function ContactStation() {
           {socials.map((s) => (
             <motion.a
               key={s.label}
-              href="#"
+              href={s.href}
               target="_blank"
               rel="noopener noreferrer"
               aria-label={`${s.label} link`}

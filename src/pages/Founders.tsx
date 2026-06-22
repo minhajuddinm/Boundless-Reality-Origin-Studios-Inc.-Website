@@ -13,6 +13,7 @@ const founders = [
     gradient: 'from-bros-cyan/20 via-bros-cyan/5 to-transparent',
     dotColor: 'bg-bros-cyan',
     glowColor: 'rgba(0,229,255,0.15)',
+    linkedin: 'https://www.linkedin.com/in/muhammad-minhajuddin76',
   },
   {
     name: 'Masir Javed',
@@ -22,6 +23,7 @@ const founders = [
     gradient: 'from-violet-500/20 via-violet-500/5 to-transparent',
     dotColor: 'bg-violet-400',
     glowColor: 'rgba(123,94,167,0.18)',
+    linkedin: 'https://www.linkedin.com/in/masirjaved/',
   },
   {
     name: 'Tarang Rana',
@@ -31,6 +33,7 @@ const founders = [
     gradient: 'from-emerald-500/15 via-emerald-500/5 to-transparent',
     dotColor: 'bg-emerald-400',
     glowColor: 'rgba(52,211,153,0.12)',
+    linkedin: 'https://www.linkedin.com/in/rana-tarang/',
   },
   {
     name: 'Raafay Sheikh',
@@ -40,6 +43,7 @@ const founders = [
     gradient: 'from-orange-500/15 via-orange-500/5 to-transparent',
     dotColor: 'bg-orange-400',
     glowColor: 'rgba(251,146,60,0.12)',
+    linkedin: 'https://www.linkedin.com/in/abdul-raafay-sheikh-833091400/',
   },
   {
     name: 'Rachit Ranabhat',
@@ -49,6 +53,7 @@ const founders = [
     gradient: 'from-pink-500/15 via-pink-500/5 to-transparent',
     dotColor: 'bg-pink-400',
     glowColor: 'rgba(244,114,182,0.12)',
+    linkedin: 'https://www.linkedin.com/in/rachit2002/',
   },
 ]
 
@@ -103,7 +108,9 @@ function FounderCard({ founder, index }: { founder: typeof founders[number]; ind
         {/* Social links */}
         <div className="flex items-center gap-2 mt-5 pt-5 border-t border-white/[0.06]" role="list" aria-label={`${founder.name} links`}>
           <motion.a
-            href="#"
+            href={founder.linkedin}
+            target="_blank"
+            rel="noopener noreferrer"
             aria-label={`${founder.name} on LinkedIn`}
             role="listitem"
             className="w-8 h-8 rounded-lg border border-white/10 glass flex items-center justify-center
@@ -112,17 +119,6 @@ function FounderCard({ founder, index }: { founder: typeof founders[number]; ind
             whileHover={motionEnabled ? { y: -2 } : undefined}
           >
             <span className="text-[11px] font-bold" aria-hidden="true">in</span>
-          </motion.a>
-          <motion.a
-            href="mailto:boundlessrealityoriginstudio@gmail.com"
-            aria-label={`Email ${founder.name}`}
-            role="listitem"
-            className="w-8 h-8 rounded-lg border border-white/10 glass flex items-center justify-center
-                       text-bros-muted hover:text-bros-white hover:border-bros-cyan/40
-                       transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-bros-cyan"
-            whileHover={motionEnabled ? { y: -2 } : undefined}
-          >
-            <span className="text-[11px]" aria-hidden="true">@</span>
           </motion.a>
         </div>
       </div>

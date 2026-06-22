@@ -3,10 +3,7 @@ import { motion, useInView } from 'framer-motion'
 import { useMotion } from '../context/MotionContext'
 
 const socials = [
-  { label: 'Facebook',  symbol: 'f'  },
-  { label: 'Twitter / X', symbol: '𝕏' },
-  { label: 'Instagram', symbol: '◻' },
-  { label: 'LinkedIn',  symbol: 'in' },
+  { label: 'LinkedIn', symbol: 'in', href: 'https://www.linkedin.com/company/boundless-reality-origin-studios-inc' },
 ]
 
 export default function Contact() {
@@ -100,7 +97,7 @@ export default function Contact() {
           {socials.map((s) => (
             <motion.a
               key={s.label}
-              href="#" // PLACEHOLDER: Replace with real URL
+              href={s.href}
               target="_blank"
               rel="noopener noreferrer"
               aria-label={`${s.label} link`}

@@ -12,6 +12,7 @@ const founders = [
     dotColor: 'bg-bros-cyan',
     glowColor: 'rgba(0,229,255,0.18)',
     borderHover: 'hover:border-bros-cyan/40',
+    linkedin: 'https://www.linkedin.com/in/muhammad-minhajuddin76',
   },
   {
     name: 'Masir Javed',
@@ -22,6 +23,7 @@ const founders = [
     dotColor: 'bg-violet-400',
     glowColor: 'rgba(123,94,167,0.20)',
     borderHover: 'hover:border-violet-400/40',
+    linkedin: 'https://www.linkedin.com/in/masirjaved/',
   },
   {
     name: 'Tarang Rana',
@@ -32,6 +34,7 @@ const founders = [
     dotColor: 'bg-emerald-400',
     glowColor: 'rgba(52,211,153,0.15)',
     borderHover: 'hover:border-emerald-400/40',
+    linkedin: 'https://www.linkedin.com/in/rana-tarang/',
   },
   {
     name: 'Raafay Sheikh',
@@ -42,6 +45,7 @@ const founders = [
     dotColor: 'bg-orange-400',
     glowColor: 'rgba(251,146,60,0.15)',
     borderHover: 'hover:border-orange-400/40',
+    linkedin: 'https://www.linkedin.com/in/abdul-raafay-sheikh-833091400/',
   },
   {
     name: 'Rachit Ranabhat',
@@ -52,6 +56,7 @@ const founders = [
     dotColor: 'bg-pink-400',
     glowColor: 'rgba(244,114,182,0.15)',
     borderHover: 'hover:border-pink-400/40',
+    linkedin: 'https://www.linkedin.com/in/rachit2002/',
   },
 ]
 
@@ -125,9 +130,10 @@ function TiltCard({ founder, index }: { founder: typeof founders[number]; index:
 
         {/* Social links */}
         <div className="flex items-center gap-2 mt-5 pt-4 border-t border-white/[0.06]" role="list" aria-label={`${founder.name} links`}>
-          {/* PLACEHOLDER: Replace href="#" with real LinkedIn URLs */}
           <a
-            href="#"
+            href={founder.linkedin}
+            target="_blank"
+            rel="noopener noreferrer"
             aria-label={`${founder.name} on LinkedIn`}
             role="listitem"
             className="w-8 h-8 rounded-lg border border-white/10 glass flex items-center justify-center
@@ -135,17 +141,6 @@ function TiltCard({ founder, index }: { founder: typeof founders[number]; index:
                        transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-bros-cyan"
           >
             <span className="text-[11px] font-bold" aria-hidden="true">in</span>
-          </a>
-          {/* PLACEHOLDER: Replace href with individual email */}
-          <a
-            href="mailto:boundlessrealityoriginstudio@gmail.com"
-            aria-label={`Email ${founder.name}`}
-            role="listitem"
-            className="w-8 h-8 rounded-lg border border-white/10 glass flex items-center justify-center
-                       text-bros-muted hover:text-bros-white hover:border-bros-cyan/40
-                       transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-bros-cyan"
-          >
-            <span className="text-[11px]" aria-hidden="true">@</span>
           </a>
         </div>
       </div>
